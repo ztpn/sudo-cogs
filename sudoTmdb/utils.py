@@ -229,9 +229,8 @@ async def build_tvshow_embed(ctx, data, tv_id, i, results):
         "Homepage": data.get("homepage"),
         "Tagline": data.get("tagline"),
         "Watch": "\n".join([
-            f"[pseudo-flix](https://pseudo-flix.pro/media/tmdb-tv-{tv_id})",
-            f"[levrx](https://movies.levrx.de/media/tmdb-tv-{tv_id})",
-            f"[pstream ⭐](https:/pstream.org/media/tmdb-tv-{tv_id})"
+            f"[pstream ⭐](https:/pstream.mov/media/tmdb-tv-{tv_id})",            
+            f"[levrx](https://movies.levrx.de/media/tmdb-tv-{tv_id})"
         ])
     }
     total_length = len(embed.title) + len(embed.description)
@@ -302,9 +301,8 @@ async def build_movie_embed(ctx, data, movie_id, i, results):
         "Homepage": data.get("homepage"),
         "Tagline": data.get("tagline"),
         "Watch": "\n".join([
-            f"[pseudo-flix](https://pseudo-flix.pro/media/tmdb-movie-{movie_id})",
-            f"[movies.levrx](https://movies.levrx.de/media/tmdb-movie-{movie_id})",
-            f"[pstream ⭐](https:/pstream.org/media/tmdb-movie-{movie_id})"
+            f"[pstream ⭐](https:/pstream.mov/media/tmdb-movie-{movie_id})",
+            f"[movies.levrx](https://movies.levrx.de/media/tmdb-movie-{movie_id})"
         ])
     }
     total_length = len(embed.title) + len(embed.description)
@@ -326,3 +324,4 @@ async def build_movie_embed(ctx, data, movie_id, i, results):
         )
     embed.set_footer(text=f"Page {i+1}/{len(results)} | Powered by TMDB")
     return embed
+
